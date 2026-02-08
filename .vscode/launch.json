@@ -5,21 +5,30 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "gamedeal",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "gamedeal (profile mode)",
+            "name": "🟢 Development",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define=ENVIRONMENT=development",
+                "--dart-define=API_BASE_URL=https://www.cheapshark.com/api/1.0",
+                // "--dart-define=FIREBASE_PROJECT_ID=gamedeal-dev",
+                "--dart-define=SHOW_DEBUG_BANNER=true",
+                "--dart-define=ENABLE_LOGGING=true"
+            ]
         },
         {
-            "name": "gamedeal (release mode)",
+            "name": "🔴 Production",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
-        }
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define=ENVIRONMENT=production",
+                "--dart-define=API_BASE_URL=https://www.cheapshark.com/api/1.0",
+                // "--dart-define=FIREBASE_PROJECT_ID=gamedeal-prod",
+                "--dart-define=SHOW_DEBUG_BANNER=false",
+                "--dart-define=ENABLE_LOGGING=false"
+            ]
+        },
     ]
 }
