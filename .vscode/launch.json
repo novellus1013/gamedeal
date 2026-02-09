@@ -12,7 +12,7 @@
             "args": [
                 "--dart-define=ENVIRONMENT=development",
                 "--dart-define=API_BASE_URL=https://www.cheapshark.com/api/1.0",
-                // "--dart-define=FIREBASE_PROJECT_ID=gamedeal-dev",
+                "--dart-define=FIREBASE_PROJECT_ID=gamedeal-dev",
                 "--dart-define=SHOW_DEBUG_BANNER=true",
                 "--dart-define=ENABLE_LOGGING=true"
             ]
@@ -25,7 +25,7 @@
             "args": [
                 "--dart-define=ENVIRONMENT=production",
                 "--dart-define=API_BASE_URL=https://www.cheapshark.com/api/1.0",
-                // "--dart-define=FIREBASE_PROJECT_ID=gamedeal-prod",
+                "--dart-define=FIREBASE_PROJECT_ID=gamedeal-prod",
                 "--dart-define=SHOW_DEBUG_BANNER=false",
                 "--dart-define=ENABLE_LOGGING=false"
             ]
