@@ -28,7 +28,8 @@
                 "--dart-define=FIREBASE_PROJECT_ID=gamedeal-prod",
                 "--dart-define=SHOW_DEBUG_BANNER=false",
                 "--dart-define=ENABLE_LOGGING=false"
-            ]
+            ],
+            "flutterMode": "release"
         },
     ]
 }
