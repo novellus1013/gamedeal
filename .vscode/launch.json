@@ -8,26 +8,31 @@
             "name": "🟢 Development",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main.dart",
+            "program": "lib/main_dev.dart",
             "args": [
-                "--dart-define=ENVIRONMENT=development",
-                "--dart-define=API_BASE_URL=https://www.cheapshark.com/api/1.0",
-                "--dart-define=FIREBASE_PROJECT_ID=gamedeal-dev",
-                "--dart-define=SHOW_DEBUG_BANNER=true",
-                "--dart-define=ENABLE_LOGGING=true"
+                "--flavor",
+                "dev",
             ]
         },
         {
-            "name": "🔴 Production",
+            "name": "🔴 Production (Debug)",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main.dart",
+            "program": "lib/main_prod.dart",
             "args": [
-                "--dart-define=ENVIRONMENT=production",
-                "--dart-define=API_BASE_URL=https://www.cheapshark.com/api/1.0",
-                "--dart-define=FIREBASE_PROJECT_ID=gamedeal-prod",
-                "--dart-define=SHOW_DEBUG_BANNER=false",
-                "--dart-define=ENABLE_LOGGING=false"
+                "--flavor",
+                "prod"
+            ]
+        },
+        {
+            "name": "🔴 Production (Release)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod",
+                "--release"
             ],
             "flutterMode": "release"
         },
