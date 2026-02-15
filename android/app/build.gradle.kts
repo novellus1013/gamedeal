@@ -5,6 +5,13 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+kotlin {
+    compilerOptions {
+        languageVersion = org.jetbrains.kotlin.gradle.dsl.KotlinVersion.KOTLIN_2_0
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+    }
+}
+
 android {
     namespace = "co.novelus.gamedeal"
     compileSdk = flutter.compileSdkVersion
@@ -13,10 +20,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
     defaultConfig {
@@ -30,16 +33,15 @@ android {
         versionName = flutter.versionName
     }
 
-    flavorDimensions = ["environment"]
+    flavorDimensions += "environment"
     productFlavors {
-        dev {
+        create("dev") {
             dimension = "environment"
             applicationId = "co.novelus.gamedeal.dev"
             versionNameSuffix = "-dev"
             resValue("string", "app_name", "GameDeal Dev")
         }
-        
-        prod {
+        create("prod") {
             dimension = "environment"
             applicationId = "co.novelus.gamedeal"
             resValue("string", "app_name", "GameDeal")
