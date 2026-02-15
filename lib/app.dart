@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:gamedeal/core/constants/app_theme.dart';
+import 'package:gamedeal/core/theme/app_theme.dart';
 
 class App extends StatelessWidget {
   final String environment;
