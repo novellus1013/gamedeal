@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:gamedeal/core/constants/app_theme.dart';
 
 class App extends StatelessWidget {
   final String environment;
@@ -12,7 +13,9 @@ class App extends StatelessWidget {
 
     return MaterialApp(
       title: 'GameDeal',
-      theme: ThemeData(fontFamily: "pretendard"),
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: environment == 'development',
       home: Scaffold(
         appBar: AppBar(title: Text('Hello')),
