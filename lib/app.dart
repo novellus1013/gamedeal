@@ -1,11 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:gamedeal/core/config/app_config.dart';
 import 'package:gamedeal/core/theme/app_theme.dart';
 
 class App extends StatelessWidget {
-  final String environment;
-
-  const App({super.key, required this.environment});
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +15,10 @@ class App extends StatelessWidget {
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
       themeMode: ThemeMode.system,
-      debugShowCheckedModeBanner: environment == 'development',
+      debugShowCheckedModeBanner: AppConfig.flavor == Flavor.dev,
       home: Scaffold(
         appBar: AppBar(title: Text('Hello')),
-        body: Center(child: Text('Environment: $environment')),
+        body: Center(child: Text('Environment: ${Flavor.dev}')),
       ),
     );
   }
